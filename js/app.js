@@ -1,5 +1,5 @@
 
-angular.module("CornerApp", ['ui.router', 'ui.bootstrap', 'angular-owl-carousel'])
+angular.module("CornerApp", ['ui.router', 'ui.bootstrap', 'CornerApp.services'])
 
 .config(function($stateProvider, $urlRouterProvider){
 
@@ -23,18 +23,19 @@ angular.module("CornerApp", ['ui.router', 'ui.bootstrap', 'angular-owl-carousel'
       templateUrl: "templates/home.html",
       controller: 'HomeCtrl'
     })
+
     .state('app.restaurants', {
-      url: "/books",
+      url: "/restaurants",
       templateUrl: "templates/restaurants.html",
       controller: 'RestaurantsCtrl'
     })
     .state('app.restaurantsdetail', {
-      url: "/books/:id",
+      url: "/restaurants/:id",
       templateUrl: "templates/restaurantsdetail.html",
-      controller: 'RestaurantsDetailCtrl'
+      controller: 'RestaturantsDetailCtrl'
     })
-    .state('app.contact', {
-      url: "/contact",
+    .state('app.gallery', {
+      url: "/gallery",
       templateUrl: "templates/contact.html",
       controller: 'ContactCtrl'
     })    

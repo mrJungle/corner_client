@@ -9,3 +9,14 @@ angular.module("CornerApp")
         }
     };
 }])
+
+.directive('appFooter', [function () {
+    return {
+        restrict: 'A',
+        templateUrl : 'templates/footer.html',
+        replace : true,
+        link: function (scope, iElement, iAttrs) {
+            
+        }
+    };
+}])

@@ -27,12 +27,18 @@ a:hover {
 html,
 body {
   height: 100%;
-  background-color: #009fee;
+
+  background-image: url("../img/texture-The-Corner.gif");
+/*  
+background-color: #eedd00;  
+*/
+
 }
 body {
   color: #fff;
   text-align: center;
-  text-shadow: 0 1px 1px rgba(0,0,0,.2);
+  text-shadow: 0 1px 1px rgba(0,0,0,0.2);
+
 }
 
 /* Extra markup and styles for table-esque vertical and horizontal centering */
@@ -93,7 +99,22 @@ body {
 .masthead-nav > .active > a:focus {
   color: #fff;
   border-bottom-color: #fff;
+  
 }
+
+
+.footer {
+
+  margin-top:10px;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: rgba(0,0,0,0.0);
+}
+
+
+
 
 @media (min-width: 768px) {
 
@@ -105,7 +126,7 @@ body {
 .masthead{
   
 
-margin:1% 15% 20% 25%;
+margin:0% 1% 4% 15%;
   
 }
 
@@ -141,11 +162,66 @@ margin:1% 15% 20% 25%;
 }
 
 
+
+
+
+
+
+
+
+.example_slide {
+  
+  min-height: 200px;
+  max-height: 400px; 
+  
+background-color: rgba(0,0,0,0);
+
+}
+
+
+
+.brand{
+  max-height: 100px;
+}
+
+.intro_lista_ristoranti {
+background-color: rgba(0,0,0,0.3);
+
+}
+
+.riga_ristoranti {
+  min-height: 50px;
+  margin-top:5px;
+  margin-bottom:5px;
+  background-color: rgba(255,0,0,0.1);  
+
+
+}
+
+@media (min-width: 468px) {
+
+.riga_ristoranti {
+  min-height: 100px;
+  margin-top:10px;
+  background-color: rgba(255,0,0,0.1);  
+
+}
+
+}
+
+
 /*
  * Affix and center
  */
 
 @media (min-width: 768px) {
+
+.riga_ristoranti {
+  min-height: 200px;
+  
+  background-color: rgba(255,0,0,0.1);  
+
+}
 
 
   /* Handle the widths */
@@ -162,17 +238,4 @@ margin:1% 15% 20% 25%;
   .cover-container {
     width: 70%;
   }
-}
-
-
-
-
-
-
-
-
-.example_slide {
-  width: 100px;
-  height: 100px; /* For at least Firefox */
-  background-color: #fff;
 }

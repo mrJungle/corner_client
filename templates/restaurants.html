@@ -1,8 +1,21 @@
-<div class="inner cover" style="backgroud:#fff;">
-  <h1 class="cover-heading">dse.</h1>
-  <p class="lead">Covedsd it your own.</p>
-  <p class="lead">
-    <a href="#" class="btn btn-lg btn-default">Lsdsore</a>
-  </p>
+
+<div class="jumbotron intro_lista_ristoranti">
+  <h1>Le Locations !</h1>
+  <p>4 spazi, dove poter gustare i sapori del mediterraneo</p>
+</div>
+<div class="row" >
+  <div class="riga_ristoranti col-xs-10 col-sm-10 col-md-12 col-lg-8 col-lg-offset-2 col-md-offset-0 col-xs-offset-1 col-sm-offset-1" ng-repeat="restaurant in restaurants"> 
+    <div class="col-xs-12 col-sm-4 col-md-4 col-lg-5"> 
+        <h2><strong>{{restaurant.nome}}</strong></h2>
+        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{restaurant.indirizzo}}<p>
+        <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>  {{restaurant.telefono}}<p>
+<h1><i class="fa fa-tripadvisor"></i></h1>
+    </div>
+    <div class="hidden-xs col-sm-8 col-md-8 col-lg-7" style="padding:10px;">
+        <img class="img-rounded img-responsive"  src="{{restaurant.mappa_img}}" style="max-height:180px;">
+    </div>
+  </div>
 </div>
 
+  
+  

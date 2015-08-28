@@ -1,12 +1,15 @@
           <div class="masthead clearfix">
             <div class="inner">
-              <h3 class="masthead-brand">Corner</h3>
+                <img ng-if="!sonoin('app.home')"  class="masthead-brand brand" alt="Brand" src="img/Logo-The-Corner.png">
+                <div ng-if="sonoin('app.home')" style="min-height:50px;"></div>
               <nav>
-                <ul class="nav masthead-nav">
-                  <li ui-sref-active="active"><a ui-sref="app.home">Home</a></li>
+                <ul ng-if="!sonoin('app.restaurantsdetail')" class="nav masthead-nav">
                   <li ui-sref-active="active"><a ui-sref="app.restaurants">Restaurant</a></li>
-                  <li ui-sref-active="active"><a ui-sref="app.contact">Contact</a></li>
+                  <li ui-sref-active="active"><a ui-sref="app.home">Home</a></li>
+                  <li ui-sref-active="active"><a ui-sref="app.gallery">Gallery</a></li>
                 </ul>
               </nav>
             </div>
           </div>
+
+
