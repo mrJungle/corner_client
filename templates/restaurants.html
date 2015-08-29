@@ -1,18 +1,23 @@
 
-<div class="jumbotron intro_lista_ristoranti">
+<div class="jumbotron intro_lista_ristoranti" style="margin-top:75px;">
   <h1>Le Locations !</h1>
   <p>4 spazi, dove poter gustare i sapori del mediterraneo</p>
 </div>
-<div class="row" >
-  <div class="riga_ristoranti col-xs-10 col-sm-10 col-md-12 col-lg-8 col-lg-offset-2 col-md-offset-0 col-xs-offset-1 col-sm-offset-1" ng-repeat="restaurant in restaurants"> 
+
+<div class="row" style="margin:0px;">
+  <div class="riga_ristoranti col-xs-10 col-sm-10 col-md-10 col-lg-8 col-lg-offset-2 col-md-offset-1 col-xs-offset-1 col-sm-offset-1" ng-repeat="restaurant in restaurants"> 
     <div class="col-xs-12 col-sm-4 col-md-4 col-lg-5"> 
-        <h2><strong>{{restaurant.nome}}</strong></h2>
-        <p><span class="glyphicon glyphicon-map-marker" aria-hidden="true"></span> {{restaurant.indirizzo}}<p>
-        <p><span class="glyphicon glyphicon-phone" aria-hidden="true"></span>  {{restaurant.telefono}}<p>
+        <h2 class="titolo_ristorante"><strong>{{restaurant.nome}}</strong></h2>
+        <p><a ng-href="{{restaurant.indirizzo_linik}}" target="blank" ><span class="glyphicon glyphicon-map-marker" aria-hidden="true" style="margin-right:3px;"></span> {{restaurant.indirizzo}}<a></p>
+        <p><a ng-href="tel:{{restaurant.telefono_link}}" ng-if="detectmob()" ><span class="glyphicon glyphicon-phone" aria-hidden="true"  style="margin-right:3px;"></span>  {{restaurant.telefono}}<a>
+        <a  ng-if="!detectmob()" ><span class="glyphicon glyphicon-phone" aria-hidden="true"  style="margin-right:3px;"></span>  {{restaurant.telefono}}<a></p>
 <h1><i class="fa fa-tripadvisor"></i></h1>
     </div>
     <div class="hidden-xs col-sm-8 col-md-8 col-lg-7" style="padding:10px;">
-        <img class="img-rounded img-responsive"  src="{{restaurant.mappa_img}}" style="max-height:180px;">
+        <img class="img-rounded img-responsive"  src="{{restaurant.mappa_img}}" style="max-height:180px;" >
+
+      <!-- ui-sref="app.restaurantsdetail({id:restaurant.id})" -->
+
     </div>
   </div>
 </div>

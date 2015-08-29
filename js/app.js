@@ -20,12 +20,14 @@ angular.module("CornerApp", ['ui.router', 'ui.bootstrap', 'CornerApp.services'])
 
     .state('app.home', {
       url: "/home",
+      cache : false,
       templateUrl: "templates/home.html",
       controller: 'HomeCtrl'
     })
 
     .state('app.restaurants', {
       url: "/restaurants",
+      cache : false,
       templateUrl: "templates/restaurants.html",
       controller: 'RestaurantsCtrl'
     })
@@ -45,4 +47,8 @@ angular.module("CornerApp", ['ui.router', 'ui.bootstrap', 'CornerApp.services'])
 
 .run(function(){
     console.log("run here")
+
+
+
 })
+
